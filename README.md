@@ -1,10 +1,13 @@
-# Breast_Cancer_Classifier
+# Breast Cancer Diagnosis with Logistic Regression and Genetic Algorithm Feature Selection
+
 #Optimizing Feature Selection for Breast Cancer Classification Using An Evolutionary Algorithm
 
-Using sklearn's simple Logistic Regression method results in a classification accuracy of 92.9%.
+This notebook explores the diagnosis of breast cancer using the Breast Cancer Wisconsin (Diagnostic) Data Set. The dataset contains clinical measurements extracted from fine needle aspirates (FNA) of breast masses, aiming to predict the presence of malignant or benign tumors. The dataset consists of 569 instances with 30 features.
 
-The dataset has 30 features. The curse of dimensionality really plays a part when we have this many features.
+Using sklearn's basic Logistic Regression method on all 30 features results in a classification accuracy of 92.9%.
 
-So I devised and fine tuned an evolutionary algorithm for feature selection. 
+Since the dataset has 30 features, The curse of dimensionality becomes significant
 
-After the algorithm returned its carefully selected features, I ran sklearn's simple Logistic Regression method again on the selected features, and it achieved an accuracy of 99.1%!
+To enhance the logistic regression model's performance, I implemented a genetic algorithm-based feature selection technique. It initializes a population of chromosomes representing feature selections, assigns fitness scores using logistic regression, and selects the best individuals for reproduction. The algorithm applies one-point crossover and mutation operations to evolve the population over multiple generations.
+
+After evolving the population, we select the best individual and extract the corresponding features from the training and testing sets. And then train another logistic regression model using the genetically selected features and achieve an accuracy of 99.1% with the same basic sklearn LR model.
