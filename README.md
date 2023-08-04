@@ -1,6 +1,4 @@
-# Breast Cancer Diagnosis with Logistic Regression and Genetic Algorithm Feature Selection
-
-#Optimizing Feature Selection for Breast Cancer Classification Using An Evolutionary Algorithm
+# Optimizing Feature Selection for Breast Cancer Classification Using An Evolutionary Algorithm
 
 This notebook explores the diagnosis of breast cancer using the Breast Cancer Wisconsin (Diagnostic) Data Set. The dataset contains clinical measurements extracted from fine needle aspirates (FNA) of breast masses, aiming to predict the presence of malignant or benign tumors. The dataset consists of 569 instances with 30 features.
 
