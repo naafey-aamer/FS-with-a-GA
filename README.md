@@ -10,4 +10,6 @@ Since the dataset has 30 features, The curse of dimensionality becomes significa
 
 To enhance the logistic regression model's performance, I implemented a genetic algorithm-based feature selection technique. It initializes a population of chromosomes representing feature selections, assigns fitness scores using logistic regression, and selects the best individuals for reproduction. The algorithm applies one-point crossover and mutation operations to evolve the population over multiple generations.
 
-After evolving the population, we selected the best individual and extracted the corresponding features from the training and testing sets. And then trained another logistic regression model using the genetically selected features and achieved an accuracy of 99.1% with the same basic sklearn LR model.
+We also performed PCA for feature selection to compare our Genetic Algorithm(GA) with. The best score achieved with what seemed the optimal number of components was 94.7%
+
+Anyways after evolving the population with our GA, we selected the best individual and extracted the corresponding features from the training and testing sets. And then trained another logistic regression model using the genetically selected features and achieved an accuracy of **99.1%** with the same basic sklearn LR model.
