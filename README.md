@@ -36,8 +36,30 @@ Run `predict_and_compare.py` to reproduce the results of this study.
 **Note**: The existing GA parameters in the predict_and_compare.py file are chosen after rigorous finetuning.
 
 
-I implemented a genetic algorithm-based feature selection technique. It initializes a population of chromosomes representing feature selections, assigns fitness scores using logistic regression, and selects the best individuals for reproduction. The algorithm applies one-point crossover and mutation operations to evolve the population over multiple generations.
+## Overview of the Genetic Algorithm (GA)
 
-We also performed PCA for feature selection to compare our Genetic Algorithm(GA) with. The best score achieved with what seemed the optimal number of components was 94.7%
+  **Initialization of Population**:
+        The algorithm begins by creating an initial population of potential feature subsets. Each subset is represented as a binary array, where each bit corresponds to the inclusion or exclusion of a feature.
 
-Anyways after evolving the population with our GA, we selected the best individual and extracted the corresponding features from the training and testing sets. And then trained another logistic regression model using the genetically selected features and achieved an accuracy of **99.1%** with the same basic sklearn LR model.
+  **Fitness Calculation**:
+        The fitness of each subset is evaluated using logistic regression as a classifier. The subsets act as feature selectors, and the model's accuracy on a held-out test set determines their fitness. Higher accuracy indicates a better-performing subset.
+
+  **Selection**:
+        Stochastic Universal Sampling (SUS) method is used for selection. Individuals (subsets) with higher fitness have a higher chance of being selected for reproduction, mimicking the concept of "survival of the fittest."
+
+  **Crossover**:
+        Selected subsets undergo crossover, where parts of one subset are exchanged with another to create new subsets. This process introduces diversity into the population by combining characteristics of successful subsets.
+
+  **Mutation**:
+        To maintain genetic diversity, some bits in the subsets are randomly flipped (mutated) with a certain probability. This operation helps in exploring new solutions.
+
+  **Evolution**:
+        Through multiple generations (defined by n_gen), the algorithm iterates over selection, crossover, and mutation, gradually improving the subsets' fitness..
+
+Initialized with a population of 6600, and a mutation rate of 0.6 for high exploration, the population was set to evolve for 200 generations.
+<img src="https://github.com/naafey-aamer/Breast_Cancer_Classifier/blob/main/images/evolution.jpg" alt="image" width="400"> <br>
+
+## Contact
+
+This was just a personal project to explore my developing interest in heuristic algorithms and optimization in general.
+To discuss further or to contribute, reach out at: naafey.aamer@gmail.com
