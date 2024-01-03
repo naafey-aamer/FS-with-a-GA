@@ -57,7 +57,7 @@ Run `predict_and_compare.py` to reproduce the results of this study.
         Through multiple generations (defined by n_gen), the algorithm iterates over selection, crossover, and mutation, gradually improving the subsets' fitness..
 
 Initialized with a population of 6600, and a mutation rate of 0.6 for high exploration, the population was set to evolve for 200 generations.
-<img src="https://github.com/naafey-aamer/Breast_Cancer_Classifier/blob/main/images/evolution.jpg" alt="image" width="400"> <br>
+<img src="https://github.com/naafey-aamer/Breast_Cancer_Classifier/blob/main/images/end_GA.png" alt="image" width="400"> <br>
 
 ## Contact
 
