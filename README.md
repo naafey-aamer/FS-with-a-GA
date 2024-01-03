@@ -62,4 +62,5 @@ Initialized with a population of 6600, and a mutation rate of 0.6 for high explo
 ## Contact
 
 This was just a personal project to explore my developing interest in heuristic algorithms and optimization in general.
+
 To discuss further or to contribute, reach out at: naafey.aamer@gmail.com
