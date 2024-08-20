@@ -5,7 +5,7 @@ This repository explores the possibility of treating feature selection as a NP-h
 
 I used the Breast Cancer Wisconsin (Diagnostic) Data Set to explore this hypothesis. The dataset contains clinical measurements extracted from fine needle aspirates (FNA) of breast masses, aiming to predict whethera tumor is **malignant** or **benign**. The dataset consists of 569 instances with 30 features.
 
-Treating feature selection as a TSP, I implemented a custom genetic algorithm tailored for this task. <br>
+Treating feature selection as a TSP, I implemented a genetic algorithm tailored for this task. <br>
 
 Additionally, the study included the use of Principal Component Analysis (PCA) as an alternative feature selection method, serving as a comparative benchmark against the Genetic Algorithm. <br>
 
